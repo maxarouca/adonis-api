@@ -25,6 +25,11 @@ Route.post("users", "UserController.store").middleware(["auth"]);
 Route.put("users/:id", "UserController.update").middleware(["auth"]);
 Route.delete("users/:id", "UserController.destroy").middleware(["auth"]);
 
+Route.get("clients", "ClientController.index").middleware(["auth"]);
+Route.post("clients", "ClientController.store").middleware(["auth"]);
+Route.put("clients/:id", "ClientController.update").middleware(["auth"]);
+Route.delete("clients/:id", "ClientController.destroy").middleware(["auth"]);
+
 Route.post("sessions", "SessionController.store");
 
 Route.post("passwords", "ForgotPasswordController.store");
